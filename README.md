@@ -29,7 +29,7 @@ Hello, world
 ### 安装
 
 ```bash
-git clone git@github.com:tanghuibo/ips.git
+git clone git@github.com:tanghuibo/fanyi.git
 cd fanyi
 npm install . -g
 ```
