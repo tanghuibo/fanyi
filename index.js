@@ -36,7 +36,7 @@ function standardized(input) {
     if(input == null || input.trim() == '') {
         return "";
     }
-    input = input.replace(/([\-\_])/g, ' ').replace(/([A-Z][a-z, 0-9])/g, ' $1');
+    input = input.replace(/([\-\_])/g, ' ').replace(/([A-Z][a-z])/g, ' $1');
     return input;
 }
 const rl = readline.createInterface({
