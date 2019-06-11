@@ -36,18 +36,7 @@ function standardized(input) {
     if(input == null || input.trim() == '') {
         return "";
     }
-    input = input.replace(/([\-\_])/g, ' ');
-    let inputCahrList = [...input];
-    input = inputCahrList[0];
-    for(let i = 1; i < inputCahrList.length; i++) {
-        if(inputCahrList[i] >= 'A' &&  inputCahrList[i] <= 'Z') {
-            if(inputCahrList[i - 1] >= 'a' &&  inputCahrList[i - 1] <= 'z') {
-                input = input + ' ' + inputCahrList[i];
-                continue;
-            }    
-        }
-        input = input + inputCahrList[i];
-    }
+    input = input.replace(/([\-\_])/g, ' ').replace(/([a-z][A-Z])/g, ($1) => {return $1[0] + ' ' + $1[1]})
     return input;
 }
 const rl = readline.createInterface({
