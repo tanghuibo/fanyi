@@ -53,7 +53,8 @@ async function fanyi(input) {
     console.log('---------------------------------');
 }
 
-let [argument] = process.argv.splice(2);
+let [ ...argument] = process.argv.splice(2);
+argument = argument.join(' ');
 if(argument != null && argument.trim() != '') {
     fanyi(argument);
 } else {
