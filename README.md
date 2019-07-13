@@ -6,27 +6,11 @@
 
 ------
 
-### 使用
-输入命令: fanyi
+## 使用
 
-然后输入你要翻译的内容
+![demo](screenshots/demo.gif)
 
-```bash
->>> fanyi           
-power by youdao
-> helloWorld
----------------------------------
-hello World
-你好，世界
----------------------------------
-> 你好，世界
----------------------------------
-你好，世界
-Hello, world
----------------------------------
-```
-
-### 安装
+## 安装
 
 ```bash
 git clone https://github.com/tanghuibo/fanyi.git
