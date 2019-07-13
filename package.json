@@ -1,6 +1,6 @@
 {
   "name": "fanyi",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "命令行翻译工具",
   "main": "index.js",
   "scripts": {

@@ -39,12 +39,9 @@ function standardized(input) {
     input = input.replace(/([\-\_])/g, ' ').replace(/([A-Z][a-z, 0-9])/g, ' $1');
     return input;
 }
-const rl = readline.createInterface({
-    input: process.stdin,
-    output: process.stdout
-});
 
-rl.on('line', async (input) => {
+
+async function fanyi(input) {
     input = standardized(input);
     if(input == null || input.trim() == '') {
         return;
@@ -54,7 +51,17 @@ rl.on('line', async (input) => {
     console.log(result.src.red);
     console.log(result.tgt.green);
     console.log('---------------------------------');
-});
+}
 
-console.log("power by youdao".yellow);
+let [argument] = process.argv.splice(2);
+if(argument != null && argument.trim() != '') {
+    fanyi(argument);
+} else {
+    const rl = readline.createInterface({
+        input: process.stdin,
+        output: process.stdout
+    });
+    rl.on('line', fanyi);
+    console.log("power by youdao".yellow);
+}
 
