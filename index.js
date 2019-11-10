@@ -28,9 +28,9 @@ function youdaoTranslation(query) {
 }
 
 /**
- * 表转化字符串
+ * 标准化字符串
  * hello-world, hello_world, helloWorld=> hello world
- * @param {String} input 代表转化字符串 
+ * @param {String} input 待标准化字符串 
  */
 function standardized(input) {
     if(input == null || input.trim() == '') {
