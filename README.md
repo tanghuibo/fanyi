@@ -17,7 +17,5 @@ FANYI是一款命令行翻译工具
 ## 安装
 
 ```bash
-git clone https://github.com/tanghuibo/fanyi.git
-cd fanyi
 npm install gfanyi -g
 ```
