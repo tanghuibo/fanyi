@@ -3,7 +3,6 @@ require('colors');
 const readline = require('readline');
 const request = require('request');
 const crypto = require('crypto');
-const md5 = crypto.createHash('md5');
 
 /**
  * 是否包含中文字符
@@ -34,7 +33,7 @@ function baiduTranslation(query) {
                 salt,
                 from: 'auto',
                 to: containsChinese(query) ? 'en' : 'zh',
-                sign: md5.update(appId + query + salt + appKey).digest('hex')
+                sign: crypto.createHash('md5').update(appId + query + salt + appKey).digest('hex')
             }
         };
         request(options, (error, response, body) => {
